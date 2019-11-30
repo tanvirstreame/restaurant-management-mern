@@ -1,7 +1,7 @@
 require("./models/db");
 const express = require("express");
 const bodyParser = require('body-parser');
-const employeeController = require("./controllers/foodController");
+const foodController = require("./controllers/foodController");
 
 var app = express();
 
@@ -14,4 +14,4 @@ app.listen(8000, ()=> {
     console.log("server is running");
 })
 
-app.use("/ai/v1/food", employeeController);
+app.use("/ai/v1/food", foodController);
